@@ -7,7 +7,10 @@
 || @description
 || | Demonstrates changing the keypad size and key values.
 || #
+
+updated for Arduino megas
 */
+
 #include <Keypad.h>
 
 const byte ROWS = 4; //four rows
@@ -19,8 +22,8 @@ char hexaKeys[ROWS][COLS] = {
   {'7','8','9','C'},
   {'*','0','#','D'}
 };
-byte rowPins[ROWS] = {9, 8, 7, 6}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {5, 4, 3, 2}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {36, 35, 34, 33}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {32, 31, 30, 29}; //connect to the column pinouts of the keypad
 
 //initialize an instance of class NewKeypad
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
